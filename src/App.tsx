@@ -1,8 +1,11 @@
-import {LoginForm} from "./containers/LoginForm.tsx";
+import {RouterProvider} from "react-router-dom";
+import { setupRouter} from "./routes/Router.tsx";
+
+const router = setupRouter();
 
 const App = () => {
 	return (
-		<LoginForm/>
+		<RouterProvider router={router}/>
 	)
 }
 

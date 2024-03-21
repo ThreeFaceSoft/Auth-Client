@@ -1,7 +1,7 @@
 import {FC, useEffect, useState} from "react";
 import {Input as AntInput} from "antd";
 import {SizeType} from "antd/es/config-provider/SizeContext";
-import {ElementSize} from "./helpers/UIEnum.ts";
+import {ElementSize} from "../../helpers/UIEnum.ts";
 
 export enum InputType {
 	Default,

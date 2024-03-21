@@ -2,7 +2,7 @@ import {FC, useEffect, useState} from "react";
 import {Button as AntButton} from "antd";
 import {SizeType} from "antd/es/config-provider/SizeContext";
 import {ButtonType as AntButtonType} from "antd/es/button";
-import {ElementSize} from "./helpers/UIEnum.ts";
+import {ElementSize} from "../../helpers/UIEnum.ts";
 
 export enum ButtonType {
 	Default,

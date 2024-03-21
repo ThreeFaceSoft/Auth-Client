@@ -1,7 +1,17 @@
-import React, {FC} from "react";
+import React from "react";
+import {Form} from "antd";
 
-export const Item: FC = (): React.ReactElement => {
+type ItemProps = {
+	label: string
+	children: React.ReactElement | React.ReactElement[]
+}
+
+export const Item = ({label, children}: ItemProps): React.ReactElement => {
 	return (
-		<></>
+		<Form.Item
+			label={label}
+		>
+			{children}
+		</Form.Item>
 	)
 }
