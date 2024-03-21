@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ./src
+    working_dir: /opt/server
+    volumes:
+      - ./src:/opt/server
+      - ./static:/opt/static
+    env_file:
+      - .env
+    command: npm run start
+
+  nginx:
+    container_name: nginx
+    depends_on:
+      - app
+    image: nginx:latest
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./static:/var/www/static
+    restart: always
